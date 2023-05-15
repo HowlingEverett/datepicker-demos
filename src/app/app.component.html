@@ -1,4 +1,18 @@
-<input matInput [matDatepicker]="picker">
-<mat-hint>MM/DD/YYYY</mat-hint>
-<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-<mat-datepicker #picker></mat-datepicker>
+<div class="angular-material-datepicker">
+  <h2>Angualar Material Datepicker</h2>
+  <input matInput [matDatepicker]="picker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</div>
+
+<div class="ng-bootstrap-datepicker">
+  <h2>NG Bootstrap Datepicker</h2>
+
+  <ng-template #customDayTemplate let-date>
+    {{date.day}}
+
+    <div class="day-accessory-recordings">Foo</div>
+  </ng-template>
+  <ngb-datepicker #ngDatepickerExample [dayTemplate]="customDayTemplate"></ngb-datepicker>
+</div>
